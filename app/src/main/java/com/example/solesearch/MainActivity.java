@@ -31,10 +31,14 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ArFragment arFragment;
+    private Button  sizeBtn;
+    private Button  boundsBtn;
+    private Button  analysisBtn;
+
+
     private static final String TAG = "MAIN ACTIVITY";
     private static final double MIN_OPENGL_VERSION = 3.0;
-    private float upDistance = 0f;
-    private ArFragment arFragment;
     private ModelRenderable andyRenderable;
     private AnchorNode myanchornode;
     private DecimalFormat form_numbers = new DecimalFormat("#0.00 m");
@@ -44,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private HitResult myhit;
 
     private TextView descriptionView;
-    private Button  widthBtn;
 
     List<AnchorNode> anchorNodes = new ArrayList<>();
 
@@ -59,30 +62,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (!checkIsSupportedDeviceOrFinish(this)) {
-            return;
-        }
-        try
-        {
-            this.getSupportActionBar().hide();
-        }
-        catch (NullPointerException e){}
-
         setContentView(R.layout.activity_main);
 
-        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_ux_fragment);
-       descriptionView = (TextView) findViewById(R.id.text);
-        widthBtn = (Button) findViewById(R.id.widthBtn);
-
-
-        widthBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetLayout();
-                measure_height = false;
-                descriptionView.setText("Click the extremes you want to measure");
-            }
-        });
+        iniComponent();
+        setupBtns();
 
 
         ModelRenderable.builder()
@@ -146,17 +129,64 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    /**
-     * Function to raise an object perpendicular to the ArPlane a specific distance
-     * @param an anchor belonging to the object that should be raised
-     * @param up distance in centimeters the object should be raised vertically
-     */
-    private void ascend(AnchorNode an, float up) {
-        Anchor anchor = myhit.getTrackable().createAnchor(
-                myhit.getHitPose().compose(Pose.makeTranslation(0, up / 100f, 0)));
 
-        an.setAnchor(anchor);
+    private void iniComponent(){
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_ux_fragment);
+        descriptionView = (TextView) findViewById(R.id.text);
+        sizeBtn = (Button) findViewById(R.id.sizeBtn);
+        boundsBtn = (Button) findViewById(R.id.boundsBtn);
+        analysisBtn = (Button) findViewById(R.id.analysisBtn);
     }
+
+    private void setupBtns(){
+        setupBoundsBtn();
+        setupSizeBtn();
+        setupAnalysisBtn();
+    }
+
+    private void setupSizeBtn(){
+        sizeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetLayout();
+                setupBtnsAndTextVisibilityWhenClicking();
+                descriptionView.setText("Click the extremes you want to measure");
+            }
+        });
+    }
+
+    private void setupBoundsBtn(){
+        boundsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetLayout();
+                setupBtnsAndTextVisibilityWhenClicking();
+                descriptionView.setText("I don't know what to say here");
+            }
+        });
+    }
+
+    private void setupAnalysisBtn(){
+        sizeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetLayout();
+                setupBtnsAndTextVisibilityWhenClicking();
+                descriptionView.setText("Something for Analysis!");
+            }
+        });
+    }
+
+
+
+
+    private void setupBtnsAndTextVisibilityWhenClicking(){
+        descriptionView.setVisibility(View.VISIBLE);
+        boundsBtn.setVisibility(View.GONE);
+        sizeBtn.setVisibility(View.GONE);
+        analysisBtn.setVisibility(View.GONE);
+    }
+
 
     /**
      * Function to return the distance in meters between two objects placed in ArPlane
