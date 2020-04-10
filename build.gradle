@@ -2,15 +2,12 @@
 
 buildscript {
     repositories {
-        google()
         jcenter()
-        
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
-        classpath 'com.android.tools.build:gradle:3.5.0-alpha06'
-        classpath 'com.google.ar.sceneform:plugin:1.7.0'
-        
+        classpath 'com.android.tools.build:gradle:3.2.1'
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -18,9 +15,13 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         jcenter()
-        
+        google()
+
+        // Import AAR(s) from a folder next to the sample app project
+        flatDir {
+            dirs "${rootDir}/../aars"
+        }
     }
 }
 
