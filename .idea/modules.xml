@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="image_classification/app" />
-      <module fileurl="file://$PROJECT_DIR$/image_classification.iml" filepath="$PROJECT_DIR$/image_classification.iml" group="image_classification" />
+      <module fileurl="file://$PROJECT_DIR$/SoleSearchAR.iml" filepath="$PROJECT_DIR$/SoleSearchAR.iml" group="SoleSearchAR" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SoleSearchAR/app" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,15 @@
+
+g
+java:S1301û"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ
+b
+java:S1192€"KDefine a constant instead of duplicating this literal "Exception!" 3 times.(–©ñê
+I
+java:S1199ü"-Extract this nested code block into a method.(²®¿ùÿÿÿÿ
+t	java:S135©"YReduce the total number of break and continue statements in this loop to use at most one.(ö›ÿªüÿÿÿÿ
+>
+java:S1604ƒ"(Make this anonymous inner class a lambda(Óè—Z
+k
+java:S1450P"URemove the "button" field and declare it as a local variable in the relevant methods.(ÈòÉ¹
+b
+java:S2142ß"FEither re-interrupt this method or rethrow the "InterruptedException".(Ñ‘Åüÿÿÿÿ
+=	java:S131û""Add a default case to this switch.(×ö³–úÿÿÿÿ

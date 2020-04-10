@@ -17,7 +17,7 @@
 * See the License for specific language governing permissions and limitations under the License.
 */
 
-package demo.tensorflow.org.customvision_sample;
+package demo.tensorflow.org.customvision_sample.obsolete;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -34,6 +34,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Vector;
+
+import demo.tensorflow.org.customvision_sample.Classifier;
+import demo.tensorflow.org.customvision_sample.ICognitiveServicesClassifier;
 
 public class MSCognitiveServicesClassifier implements ICognitiveServicesClassifier {
 

@@ -1,0 +1,11 @@
+
+T
+java:S1172"9Remove this unused method parameter "savedInstanceState".(©ó‘ãøÿÿÿÿ
+w
+java:S1450"\Remove the "saveViewModel" field and declare it as a local variable in the relevant methods.(º£à¡þÿÿÿÿ
+E
+java:S1604"(Make this anonymous inner class a lambda(¤†ƒŸ8‹¢á®–.
+\
+java:S1874":Remove this use of "ViewModelProviders"; it is deprecated.(½°ã‡ýÿÿÿÿ8‹¢á®–.
+L
+java:S1874"*Remove this use of "of"; it is deprecated.(½°ã‡ýÿÿÿÿ8‹¢á®–.

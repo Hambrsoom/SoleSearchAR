@@ -1,0 +1,11 @@
+
+w
+java:S1450"\Remove the "homeViewModel" field and declare it as a local variable in the relevant methods.(¿­¶üÿÿÿÿ
+T
+java:S1172"9Remove this unused method parameter "savedInstanceState".(©ó‘ãøÿÿÿÿ
+J
+java:S1604"(Make this anonymous inner class a lambda(öÔ°Æıÿÿÿÿ8şã®–.
+\
+java:S1874":Remove this use of "ViewModelProviders"; it is deprecated.(¶ÓÇÿÿÿÿÿÿ8şã®–.
+L
+java:S1874"*Remove this use of "of"; it is deprecated.(¶ÓÇÿÿÿÿÿÿ8şã®–.

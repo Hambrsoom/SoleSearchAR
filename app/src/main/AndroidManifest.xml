@@ -2,31 +2,37 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="demo.tensorflow.org.customvision_sample">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
-
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.google.ar.core"
-            android:value="required" />
 
-        <activity android:name="demo.tensorflow.org.customvision_sample.MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
-        <activity android:name="demo.tensorflow.org.customvision_sample.ClassifierActivity"
+        <activity
+            android:name=".ClassifierActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
     </application>
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

@@ -318,6 +318,7 @@ public class CameraConnectionFragment extends Fragment {
   @Override
   public View onCreateView(
       final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+
     return inflater.inflate(layout, container, false);
   }
 

@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package demo.tensorflow.org.customvision_sample;
+package demo.tensorflow.org.customvision_sample.obsolete;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -29,6 +29,8 @@ import java.util.PriorityQueue;
 import java.util.Vector;
 import org.tensorflow.Operation;
 import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+
+import demo.tensorflow.org.customvision_sample.Classifier;
 
 /** A classifier specialized to label images using TensorFlow. */
 public class TensorFlowImageClassifier implements Classifier {
