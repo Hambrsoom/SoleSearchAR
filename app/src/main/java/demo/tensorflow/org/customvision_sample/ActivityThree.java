@@ -45,7 +45,7 @@ public class ActivityThree extends AppCompatActivity {
                         break;
 
                     case R.id.navigation_photo:
-                        Intent intent2 = new Intent(ActivityThree.this, ActivityTwo.class);
+                        Intent intent2 = new Intent(ActivityThree.this, ClassifierActivity.class);
                         startActivity(intent2);
                         break;
 

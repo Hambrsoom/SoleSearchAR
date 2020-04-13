@@ -1,19 +1,3 @@
-/*
- * Copyright 2016 The TensorFlow Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package demo.tensorflow.org.customvision_sample;
 
 import android.Manifest;
@@ -55,7 +39,7 @@ import androidx.navigation.ui.NavigationUI;
 import demo.tensorflow.org.customvision_sample.env.Logger;
 import demo.tensorflow.org.customvision_sample.env.ImageUtils;
 
-public abstract class CameraActivity extends AppCompatActivity implements OnImageAvailableListener, Camera.
+public class CameraActivity extends AppCompatActivity implements OnImageAvailableListener, Camera.
         PreviewCallback {
   private static final Logger LOGGER = new Logger();
 
@@ -99,15 +83,7 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
       requestPermission();
     }
 
-    button = (Button) findViewById(R.id.callMe);
     final AppCompatActivity activity = this;
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        Intent intent = new Intent(activity, MainActivity.class);
-        startActivity(intent);
-      }
-    });
   }
 
   /**
@@ -403,8 +379,8 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
     return super.onKeyDown(keyCode, event);
   }
 
-  protected abstract void processImageRGBbytes(int[] rgbBytes ) ;
-  protected abstract void onPreviewSizeChosen(final Size size, final int rotation);
-  protected abstract int getLayoutId();
-  protected abstract Size getDesiredPreviewFrameSize();
+  protected  void processImageRGBbytes(int[] rgbBytes ) {}
+  protected  void onPreviewSizeChosen(final Size size, final int rotation){}
+  protected  int getLayoutId(){return 0;}
+  protected  Size getDesiredPreviewFrameSize(){return new Size(10,10);};
 }

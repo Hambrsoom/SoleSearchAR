@@ -12,8 +12,6 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.navigation_photo:
-                        Intent intent2 = new Intent(MainActivity.this, CameraActivity.class);
+                        Intent intent2 = new Intent(MainActivity.this, ClassifierActivity.class);
                         startActivity(intent2);
                         break;
 
@@ -173,9 +171,8 @@ public class MainActivity extends AppCompatActivity {
     private void iniComponent(){
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_ux_fragment);
         descriptionView = (TextView) findViewById(R.id.text);
-
     }
-    
+
     /**
      * Function to return the distance in meters between two objects placed in ArPlane
      * @param anchor1 first object's anchor
@@ -190,34 +187,6 @@ public class MainActivity extends AppCompatActivity {
             totalDistanceSquared += distance_vector[i] * distance_vector[i];
         return (float) Math.sqrt(totalDistanceSquared);
     }
-
-
-    /**
-     * Check whether the device supports the tools required to use the measurement tools
-     * @param activity
-     * @return boolean determining whether the device is supported or not
-     */
-    private boolean checkIsSupportedDeviceOrFinish(final Activity activity) {
-        if (Build.VERSION.SDK_INT < VERSION_CODES.N) {
-            Log.e(TAG, "Sceneform requires Android N or later");
-            Toast.makeText(activity, "Sceneform requires Android N or later", Toast.LENGTH_LONG).show();
-            activity.finish();
-            return false;
-        }
-        String openGlVersionString =
-                ((ActivityManager) activity.getSystemService(Context.ACTIVITY_SERVICE))
-                        .getDeviceConfigurationInfo()
-                        .getGlEsVersion();
-        if (Double.parseDouble(openGlVersionString) < MIN_OPENGL_VERSION) {
-            Log.e(TAG, "Sceneform requires OpenGL ES 3.0 later");
-            Toast.makeText(activity, "Sceneform requires OpenGL ES 3.0 or later", Toast.LENGTH_LONG)
-                    .show();
-            activity.finish();
-            return false;
-        }
-        return true;
-    }
-
 
     /**
      * Set layout to its initial state

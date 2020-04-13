@@ -16,6 +16,7 @@
 
 package demo.tensorflow.org.customvision_sample;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -28,11 +29,16 @@ import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
+import androidx.annotation.NonNull;
 import demo.tensorflow.org.customvision_sample.OverlayView.DrawCallback;
 import demo.tensorflow.org.customvision_sample.env.BorderedText;
 import demo.tensorflow.org.customvision_sample.env.Logger;
@@ -52,6 +58,46 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         super.onCreate(savedInstanceState);
 
         classifier = new MSCognitiveServicesCustomVisionClassifier(this);
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        demo.tensorflow.org.customvision_sample.BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent intent2 = new Intent(ClassifierActivity.this, MainActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.navigation_record:
+                        Intent intent1 = new Intent(ClassifierActivity.this, ActivityOne.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.navigation_photo:
+                        break;
+
+                    case R.id.navigation_save:
+                        Intent intent3 = new Intent(ClassifierActivity.this, ActivityThree.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.navigation_email:
+                        Intent intent4 = new Intent(ClassifierActivity.this, ActivityFour.class);
+                        startActivity(intent4);
+                        break;
+                }
+
+
+                return false;
+            }
+        });
     }
 
     @Override
