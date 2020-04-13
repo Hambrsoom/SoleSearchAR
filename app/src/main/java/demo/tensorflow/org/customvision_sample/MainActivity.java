@@ -175,16 +175,7 @@ public class MainActivity extends AppCompatActivity {
         descriptionView = (TextView) findViewById(R.id.text);
 
     }
-
-
-    private void setupBtnsAndTextVisibilityWhenClicking(){
-        descriptionView.setVisibility(View.VISIBLE);
-        boundsBtn.setVisibility(View.GONE);
-        sizeBtn.setVisibility(View.GONE);
-        analysisBtn.setVisibility(View.GONE);
-    }
-
-
+    
     /**
      * Function to return the distance in meters between two objects placed in ArPlane
      * @param anchor1 first object's anchor
