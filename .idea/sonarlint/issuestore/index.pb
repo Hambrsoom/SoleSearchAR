@@ -1,24 +1,6 @@
 
-ƒ
-Sapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/home/HomeFragment.java,7\3\7366f2cba86d726d572fbd0050e81e156f807b3f
-„
-Tapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/home/HomeViewModel.java,2\5\25842e4cd282efa06d59201b1374ce39c7c8d6a0
-ˆ
-Xapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/record/RecordViewModel.java,b\e\bedd578976790e3f3426248edc48ff8a5de2ee8b
-…
-Uapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/photo/PhotoFragment.java,1\1\1114cb84e023279878ec15773dcdb7011058a00e
-…
-Uapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/email/EmailFragment.java,4\a\4a8bf6fc3a152cc1a52e3c4fde01b3a005a444e1
-†
-Vapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/photo/PhotoViewModel.java,8\6\860c83043574e714be74bf9bc34dc4cf28c071e6
-ˆ
-Xapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/download/SaveViewModel.java,f\e\fe70017f2e7cee99d3193bde8e0a9f1eeef5c64d
-‡
-Wapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/record/RecordFragment.java,d\c\dc1f544b7815c8d278f8dc2a8bbb91ea8284c0fb
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-‡
-Wapp/src/main/java/demo/tensorflow/org/customvision_sample/ui/download/SaveFragment.java,7\0\70ae86444b77b3cb2fce84d4f189725dac35374a
 ‘
 aapp/src/main/java/demo/tensorflow/org/customvision_sample/obsolete/TensorFlowImageClassifier.java,7\8\78225816ab1b99d363b530bc6f2f65c861e90f72
 •
