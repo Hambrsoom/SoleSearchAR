@@ -1,11 +1,11 @@
 
-P
-java:S1874":Remove this use of "ViewModelProviders"; it is deprecated.(ùû‚æ
-@
-java:S1874"*Remove this use of "of"; it is deprecated.(ùû‚æ
 x
 java:S1450"]Remove the "photoViewModel" field and declare it as a local variable in the relevant methods.(ÑÍÂøÿÿÿÿ
+G
+java:S1874"*Remove this use of "of"; it is deprecated.(ùû‚æ8ĞšÖ°–.
+J
+java:S1604"(Make this anonymous inner class a lambda(Æ”ÜÖûÿÿÿÿ8¨ÜØ°–.
+W
+java:S1874":Remove this use of "ViewModelProviders"; it is deprecated.(ùû‚æ8ĞšÖ°–.
 T
 java:S1172"9Remove this unused method parameter "savedInstanceState".(©ó‘ãøÿÿÿÿ
-C
-java:S1604"(Make this anonymous inner class a lambda(Æ”ÜÖûÿÿÿÿ

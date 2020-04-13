@@ -9,6 +9,11 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".MainActivity" />
+        <activity android:name=".ActivityOne"/>
+        <activity android:name=".ActivityTwo"/>
+        <activity android:name=".ActivityThree"/>
+        <activity android:name=".ActivityFour"/>
+        <activity android:name=".CameraActivity"/>
 
         <activity
             android:name=".ClassifierActivity"

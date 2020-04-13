@@ -29,3 +29,7 @@ Mapp/src/main/java/demo/tensorflow/org/customvision_sample/CameraActivity.java,
 Wapp/src/main/java/demo/tensorflow/org/customvision_sample/CameraConnectionFragment.java,b\6\b66341502c250900e18bcc526930dc09b87c7883
 ã
 [app/src/main/java/demo/tensorflow/org/customvision_sample/ICognitiveServicesClassifier.java,8\5\8568c637217be9e9f2b638f7d91b412f7c4f30a9
+Å
+Qapp/src/main/java/demo/tensorflow/org/customvision_sample/ClassifierActivity.java,b\f\bfdaf9310b74f998f79bb9874606360d611938cb
+{
+Kapp/src/main/java/demo/tensorflow/org/customvision_sample/MainActivity.java,a\6\a69c4141eda56fed1b8b4d266e4b13fb5eb5c9d2

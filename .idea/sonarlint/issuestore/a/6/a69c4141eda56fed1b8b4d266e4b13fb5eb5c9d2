@@ -1,0 +1,28 @@
+
+o
+java:S1128#"TRemove this unnecessary import: same package classes are always implicitly imported.(Õùşıÿÿÿÿ
+n	java:S116>"YRename this field "fl_measurement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«À“Á
+f
+java:S1144â"CRemove this unused private "checkIsSupportedDeviceOrFinish" method.(â”ü²ûÿÿÿÿ8©ş¨¯–.
+q	java:S1161"WRename this field "form_numbers" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¾œçøÿÿÿÿ
+@
+java:S16593"%Declare "anchor2" on a separate line.(¸ÿïûÿÿÿÿ
+n	java:S116;"YRename this field "measure_height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ»ˆ‡
+n	java:S116<"TRename this field "arl_saved" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù—¥ğúÿÿÿÿ
+q
+java:S14500"[Remove the "myanchornode" field and declare it as a local variable in the relevant methods.(—’—€
+n	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å¨ı¦8©ş¨¯–.
+j
+java:S14505"TRemove the "myhit" field and declare it as a local variable in the relevant methods.(Æ Úš
+t
+java:S2293<"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ù—¥ğúÿÿÿÿ
+?
+java:S10685")Remove this unused "myhit" private field.(Æ Úš
+F
+java:S10680"0Remove this unused "myanchornode" private field.(—’—€
+F
+java:S1068@"+Remove this unused "message" private field.(ù„è¿ûÿÿÿÿ
+X
+java:S1854‡"5Remove this useless assignment to local variable "n".(ïÀ‡›úÿÿÿÿ8©ş¨¯–.
+H
+java:S1068<"-Remove this unused "arl_saved" private field.(Ù—¥ğúÿÿÿÿ

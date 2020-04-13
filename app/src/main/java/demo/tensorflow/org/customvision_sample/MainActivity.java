@@ -3,11 +3,14 @@ package demo.tensorflow.org.customvision_sample;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -27,12 +30,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import demo.tensorflow.org.customvision_sample.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,15 +70,48 @@ public class MainActivity extends AppCompatActivity {
 
         iniComponent();
         setupBtns();
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_record, R.id.navigation_photo, R.id.navigation_save, R.id.navigation_email)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        demo.tensorflow.org.customvision_sample.BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
+
+        TextView title = (TextView) findViewById(R.id.activityTitle0);
+        title.setText("This is Activity Home");
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+
+                        break;
+
+                    case R.id.navigation_record:
+                        Intent intent1 = new Intent(MainActivity.this, ActivityOne.class);
+                        startActivity(intent1);
+                        break;
+
+                    case R.id.navigation_photo:
+                        Intent intent2 = new Intent(MainActivity.this, CameraActivity.class);
+                        startActivity(intent2);
+                        break;
+
+                    case R.id.navigation_save:
+                        Intent intent3 = new Intent(MainActivity.this, ActivityThree.class);
+                        startActivity(intent3);
+                        break;
+
+                    case R.id.navigation_email:
+                        Intent intent4 = new Intent(MainActivity.this, ActivityFour.class);
+                        startActivity(intent4);
+                        break;
+                }
+
+
+                return false;
+            }
+        });
 
 
         ModelRenderable.builder()

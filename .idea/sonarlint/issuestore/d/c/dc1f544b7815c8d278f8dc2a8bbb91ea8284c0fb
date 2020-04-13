@@ -3,9 +3,3 @@ T
 java:S1172"9Remove this unused method parameter "savedInstanceState".(©ó‘ãøÿÿÿÿ
 y
 java:S1450"^Remove the "recordViewModel" field and declare it as a local variable in the relevant methods.(–°‡±þÿÿÿÿ
-E
-java:S1604"(Make this anonymous inner class a lambda(Šõ­ù8Ëƒä®–.
-W
-java:S1874":Remove this use of "ViewModelProviders"; it is deprecated.(§Èö†8Ëƒä®–.
-G
-java:S1874"*Remove this use of "of"; it is deprecated.(§Èö†8Ëƒä®–.

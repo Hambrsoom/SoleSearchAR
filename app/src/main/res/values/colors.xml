@@ -6,4 +6,6 @@
     <color name="translucent_black">#8000</color>
     <color name="colorGreen">#060</color>
     <color name="colorBlue">#2C98F0</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorGrey">#c3c3c3 </color>
 </resources>
