@@ -30,14 +30,6 @@
                     tools:layout="@layout/activity_main" />
 
                 <TextView
-                    android:id="@+id/activityTitle0"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="80dp"
-                    android:textAlignment="center"
-                    android:textSize="30sp" />
-
-                <TextView
                     android:id="@+id/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -55,33 +47,6 @@
                 android:layout_height="match_parent"
                 android:gravity="bottom"
                 android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/analysisBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="270dp"
-                    android:background="@drawable/ic_text_round_blue"
-                    android:text="Analysis"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:id="@+id/boundsBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="270dp"
-                    android:background="@drawable/ic_text_round_blue"
-                    android:text="Bounds"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:id="@+id/sizeBtn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="270dp"
-                    android:background="@drawable/ic_text_round_blue"
-                    android:text="Size"
-                    android:textColor="#FFFFFF" />
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/bottomNavView_Bar"

@@ -36,9 +36,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private ArFragment arFragment;
-    private Button  sizeBtn;
-    private Button  boundsBtn;
-    private Button  analysisBtn;
 
 
     private static final String TAG = "MAIN ACTIVITY";
@@ -69,15 +66,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         iniComponent();
-        setupBtns();
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         demo.tensorflow.org.customvision_sample.BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(0);
         menuItem.setChecked(true);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle0);
-        title.setText("This is Activity Home");
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -179,51 +173,8 @@ public class MainActivity extends AppCompatActivity {
     private void iniComponent(){
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_ux_fragment);
         descriptionView = (TextView) findViewById(R.id.text);
-        sizeBtn = (Button) findViewById(R.id.sizeBtn);
-        boundsBtn = (Button) findViewById(R.id.boundsBtn);
-        analysisBtn = (Button) findViewById(R.id.analysisBtn);
+
     }
-
-    private void setupBtns(){
-        setupBoundsBtn();
-        setupSizeBtn();
-        setupAnalysisBtn();
-    }
-
-    private void setupSizeBtn(){
-        sizeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetLayout();
-                setupBtnsAndTextVisibilityWhenClicking();
-                descriptionView.setText("Click the extremes you want to measure");
-            }
-        });
-    }
-
-    private void setupBoundsBtn(){
-        boundsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetLayout();
-                setupBtnsAndTextVisibilityWhenClicking();
-                descriptionView.setText("I don't know what to say here");
-            }
-        });
-    }
-
-    private void setupAnalysisBtn(){
-        sizeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetLayout();
-                setupBtnsAndTextVisibilityWhenClicking();
-                descriptionView.setText("Something for Analysis!");
-            }
-        });
-    }
-
-
 
 
     private void setupBtnsAndTextVisibilityWhenClicking(){
