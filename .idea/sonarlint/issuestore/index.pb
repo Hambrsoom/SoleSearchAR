@@ -15,3 +15,9 @@ Wapp/src/main/java/demo/tensorflow/org/customvision_sample/CameraConnectionFragm
 Qapp/src/main/java/demo/tensorflow/org/customvision_sample/ClassifierActivity.java,b\f\bfdaf9310b74f998f79bb9874606360d611938cb
 {
 Kapp/src/main/java/demo/tensorflow/org/customvision_sample/MainActivity.java,a\6\a69c4141eda56fed1b8b4d266e4b13fb5eb5c9d2
+;
+app/app.iml,7\c\7c1d2a1927c01fa75a9b4c74ea8addcc06b327ae
+@
+local.properties,0\7\0712df971a99ac4d2fccb8e0fb19f377f3374cca
+‰
+Yapp/src/main/java/demo/tensorflow/org/customvision_sample/BottomNavigationViewHelper.java,c\9\c9d6babb2a30792b869060731d68edbbe31c830c

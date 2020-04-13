@@ -1,108 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/analysisBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="270dp"
-            android:background="@drawable/ic_text_round_blue"
-            android:text="Analysis"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/boundsBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="270dp"
-            android:background="@drawable/ic_text_round_blue"
-            android:text="Bounds"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/sizeBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="270dp"
-            android:background="@drawable/ic_text_round_blue"
-            android:text="Size"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
-
-    <fragment android:name="com.google.ar.sceneform.ux.ArFragment"
-        android:id="@+id/sceneform_ux_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/__arcore_education" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/ic_text_round_blue"
-        android:radius="50dp">
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/ic_text_round_blue"
-            android:text="Select width or height"
-            android:textAlignment="center"
-            android:textColor="#fff"
-            android:textSize="30sp"
-            tools:visibility="gone" />
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="#000">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/bottomBar"
-            android:layout_alignParentBottom="true">
+            android:layout_height="match_parent">
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sceneform_ux_fragment"
+                    android:name="com.google.ar.sceneform.ux.ArFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/activity_main" />
+
+                <TextView
+                    android:id="@+id/activityTitle0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/ic_text_round_blue"
+                    android:text="@string/select_width_or_height"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="30sp"
+                    tools:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/bottomNavView_Bar"
-                android:background="@drawable/white_grey_border_top"
-                app:menu="@menu/bottom_nav_menu"
-                app:layout_constraintBottom_toBottomOf="parent">
+                android:gravity="bottom"
+                android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/analysisBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="270dp"
+                    android:background="@drawable/ic_text_round_blue"
+                    android:text="Analysis"
+                    android:textColor="#FFFFFF" />
 
-            </com.google.android.material.bottomnavigation.BottomNavigationView>
+                <Button
+                    android:id="@+id/boundsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="270dp"
+                    android:background="@drawable/ic_text_round_blue"
+                    android:text="Bounds"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/sizeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="270dp"
+                    android:background="@drawable/ic_text_round_blue"
+                    android:text="Size"
+                    android:textColor="#FFFFFF" />
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavView_Bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_weight="0"
+                    android:background="@drawable/white_grey_border_top"
+                    app:menu="@menu/bottom_nav_menu" />
+            </LinearLayout>
         </RelativeLayout>
+    </FrameLayout>
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/bottomBar"
-            >
-
-            <TextView
-                android:id="@+id/activityTitle0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:textAlignment="center"
-                android:textSize="30sp" />
-
-        </RelativeLayout>
-    </RelativeLayout>
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
