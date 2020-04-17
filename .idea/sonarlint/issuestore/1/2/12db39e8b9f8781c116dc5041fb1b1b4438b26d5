@@ -1,17 +1,45 @@
 
-I
-java:S1199"-Extract this nested code block into a method.(²®¿ùÿÿÿÿ
+]
+java:S1128$";Remove this unused import 'androidx.navigation.Navigation'.(ÄíÚÀÿÿÿÿÿ8åÙ“§—.
+{	java:S135—"YReduce the total number of break and continue statements in this loop to use at most one.(ö›ÿªüÿÿÿÿ8åÙ“§—.
+i
+java:S2142Í"FEither re-interrupt this method or rethrow the "InterruptedException".(Ñ‘Åüÿÿÿÿ8åÙ“§—.
+^
+java:S1854V"<Remove this useless assignment to local variable "activity".(ôÊ×Ñøÿÿÿÿ8Ò¯º©—.
+O
+java:S1481V"-Remove this unused "activity" local variable.(ôÊ×Ñøÿÿÿÿ8Ò¯º©—.
+€
+java:S1128"^Remove this unused import 'com.google.android.material.bottomnavigation.BottomNavigationView'.(ºØÇÿÿÿÿÿ8åÙ“§—.
+G
+java:S1068G"*Remove this unused "button" private field.(ÈòÉ¹8Ò¯º©—.
+D
+java:S1604q"(Make this anonymous inner class a lambda(Óè—Z8åÙ“§—.
+P
+java:S1128".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8Ò¯º©—.
+i
+java:S1128%"GRemove this unused import 'androidx.navigation.ui.AppBarConfiguration'.(È¸›şÿÿÿÿ8åÙ“§—.
+D	java:S131é""Add a default case to this switch.(×ö³–úÿÿÿÿ8åÙ“§—.
+?
+java:S1116"Remove this empty statement.(‡ÈœÍûÿÿÿÿ8Ÿ¥¨©—.
+O
+java:S1128"3Remove this unused import 'android.content.Intent'.(³ğ‹G8Ò¯º©—.
+¤
+java:S1186ñ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Û¢Òøÿÿÿÿ8Àğ¥©—.
+Ÿ
+java:S1186ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎõÆ´8â“§©—.
 b
-java:S2142ğ"FEither re-interrupt this method or rethrow the "InterruptedException".(Ñ‘Åüÿÿÿÿ
-k
-java:S1450W"URemove the "button" field and declare it as a local variable in the relevant methods.(ÈòÉ¹
->
-java:S1604”"(Make this anonymous inner class a lambda(Óè—Z
-=	java:S131Œ""Add a default case to this switch.(×ö³–úÿÿÿÿ
-t	java:S135º"YReduce the total number of break and continue statements in this loop to use at most one.(ö›ÿªüÿÿÿÿ
-g
-java:S1301Œ"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ
-b
-java:S1192‘"KDefine a constant instead of duplicating this literal "Exception!" 3 times.(–©ñê
+java:S1128&"@Remove this unused import 'androidx.navigation.ui.NavigationUI'.(„¾¯Êüÿÿÿÿ8åÙ“§—.
+\
+java:S3400€"9Remove this method and declare a constant for this value.(¡×¨„üÿÿÿÿ8åæ§©—.
+P
+java:S1199ê"-Extract this nested code block into a method.(²®¿ùÿÿÿÿ8åÙ“§—.
+h
+java:S1192n"KDefine a constant instead of duplicating this literal "Exception!" 3 times.(–©ñê8åÙ“§—.
+¤
+java:S1186ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(à‹Âëøÿÿÿÿ8ùõ¦©—.
+`
+java:S1128#">Remove this unused import 'androidx.navigation.NavController'.(ˆç×ƒÿÿÿÿÿ8åÙ“§—.
+n
+java:S1301é"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8åÙ“§—.
 F
-java:S1604İ"(Make this anonymous inner class a lambda(šµæê8İÚ¡°–.
+java:S1604º"(Make this anonymous inner class a lambda(šµæê8Üôıµ—.

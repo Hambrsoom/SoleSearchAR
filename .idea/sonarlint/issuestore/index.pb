@@ -21,3 +21,13 @@ Kapp/src/main/java/demo/tensorflow/org/customvision_sample/MainActivity.java,a\
 local.properties,0\7\0712df971a99ac4d2fccb8e0fb19f377f3374cca
 ‰
 Yapp/src/main/java/demo/tensorflow/org/customvision_sample/BottomNavigationViewHelper.java,c\9\c9d6babb2a30792b869060731d68edbbe31c830c
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+{
+Kapp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityFour.java,d\1\d11aded358495cdf482db7ce3365d9f9a6a5f767
+z
+Japp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityOne.java,7\c\7c1e6802435c24cb6af2b96842fe6a166cd696eb
+|
+Lapp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityThree.java,f\9\f9a9399e8823ed5b9d41cab9a97dc14c5db31718
+z
+Japp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityTwo.java,7\c\7cfc213cfef7b290e4e8b6d3dc1d912a361df25e

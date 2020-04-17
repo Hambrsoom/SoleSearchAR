@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,20 +10,85 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/bottomBar">
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/bg_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
             <TextView
-                android:id="@+id/activityTitle4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                android:id="@+id/text_to"
+                android:background="@android:color/transparent"/>
 
-        </RelativeLayout>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_subject"
+            android:hint="Subject"
+            android:padding="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bg_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/text_message"
+            android:layout_weight ="1"
+            android:hint="Message"
+            android:padding="10dp"
+            android:gravity="top"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/bg_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pick_Image_btn"
+            android:text="Choose Image"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginRight="125dp"
+            android:padding="15dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="450dp"
+            android:id="@+id/image"
+            />
+
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="600dp"
+            android:background="@drawable/bg_shape"
+            android:padding="15dp"
+            android:text="send"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp" />
 
         <RelativeLayout
             android:id="@+id/bottomBar"

@@ -15,8 +15,10 @@ import android.media.Image;
 import android.media.Image.Plane;
 import android.media.ImageReader;
 import android.media.ImageReader.OnImageAvailableListener;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Trace;
@@ -29,7 +31,12 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.util.Date;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -69,13 +76,20 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
 
 
   private Button button;
-
+  private Button screenShotBtn;
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
     LOGGER.d("onCreate " + this);
     super.onCreate(null);
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+//    screenShotBtn = findViewById(R.id.screenShotBtn);
+//    screenShotBtn.setOnClickListener(new View.OnClickListener() {
+//      @Override
+//      public void onClick(View v) {
+//        screenshot();
+//      }
+//    });
     setContentView(R.layout.activity_camera);
     if (hasPermission()) {
       setFragment();
@@ -84,6 +98,36 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
     }
 
     final AppCompatActivity activity = this;
+  }
+
+  private void screenshot(){
+    Date date = new Date();
+    CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss",date);
+    String filename = Environment.getExternalStorageDirectory() + "/ScreenShooter/"+now+".jpg";
+
+    View root = getWindow().getDecorView();
+    root.setDrawingCacheEnabled(true);
+    Bitmap bitmap =  Bitmap.createBitmap(root.getDrawingCache());
+    root.setDrawingCacheEnabled(false);
+
+    File file = new File(filename);
+    file.getParentFile().mkdirs();
+
+    try {
+      FileOutputStream fileOutputStream = new FileOutputStream(file);
+      bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+      fileOutputStream.flush();
+      fileOutputStream.close();
+
+      Uri uri = Uri.fromFile(file);
+      Intent intent = new Intent(Intent.ACTION_VIEW);
+      intent.setDataAndType(uri, "image/*");
+      startActivity(intent);
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   /**
