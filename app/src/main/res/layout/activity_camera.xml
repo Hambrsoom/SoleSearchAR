@@ -20,15 +20,8 @@
                     android:id="@+id/screenShot_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                android:text="Screen Shoot" />
-<!--                    android:layout_alignParentBottom="true"-->
-<!--                    android:layout_marginBottom="50dp"-->
-
-<!--            <Button-->
-<!--                android:id="@+id/callMe"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Button" />-->
+                    android:layout_marginTop="620dp"
+                    android:text="Screen Shoot" />
         </RelativeLayout>
     </FrameLayout>
 

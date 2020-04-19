@@ -1,34 +1,34 @@
 
-F
-java:S1128)")Remove this unused import 'java.io.File'.(†Ğ¥Å8á°ÏÌ˜.
-S
-java:S1068@"1Remove this unused "screenShotBtn" private field.(úß³×ÿÿÿÿÿ8¼ºĞÌ˜.
+D
+java:S1604¥"(Make this anonymous inner class a lambda(Ã®­Šùÿÿÿÿ
+E
+java:S1604™"(Make this anonymous inner class a lambda(‹ë¥Y8ßë¦Ÿ™.
+P
+java:S1128$".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8¼ºĞÌ˜.
+R
+java:S1128,"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8á°ÏÌ˜.
+H
+java:S1128."+Remove this unused import 'java.util.Date'.(¸…¼ü8á°ÏÌ˜.
+J
+java:S1604Q"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8ßë¦Ÿ™.
+˜
+java:S1186Â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£Œ£Õ
 u
 java:S2293Ê"YReplace the type specification in this constructor call with the diamond operator ("<>").(¾³¿£üÿÿÿÿ
+Q
+java:S1128+"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8á°ÏÌ˜.
+U
+java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ8á°ÏÌ˜.
+J
+java:S1128"4Remove this unused import 'android.graphics.Matrix'.(ÑÏ’
+C	java:S131T""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ì°´©—.
+F
+java:S1128)")Remove this unused import 'java.io.File'.(†Ğ¥Å8á°ÏÌ˜.
+\
+java:S1128*":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8á°ÏÌ˜.
 
 java:S1149Ê"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¾³¿£üÿÿÿÿ
 N
 java:S1128",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ8á°ÏÌ˜.
-Q
-java:S1128+"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8á°ÏÌ˜.
-J
-java:S1604Q"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8«´è˜.
-˜
-java:S1186Â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£Œ£Õ
-R
-java:S1128,"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8á°ÏÌ˜.
-\
-java:S1128*":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8á°ÏÌ˜.
-D
-java:S1604¥"(Make this anonymous inner class a lambda(Ã®­Šùÿÿÿÿ
-U
-java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ8á°ÏÌ˜.
-P
-java:S1128$".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8¼ºĞÌ˜.
-C	java:S131T""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ì°´©—.
-E
-java:S1604™"(Make this anonymous inner class a lambda(‹ë¥Y8«´è˜.
-J
-java:S1128"4Remove this unused import 'android.graphics.Matrix'.(ÑÏ’
-H
-java:S1128."+Remove this unused import 'java.util.Date'.(¸…¼ü8á°ÏÌ˜.
+S
+java:S1068@"1Remove this unused "screenShotBtn" private field.(úß³×ÿÿÿÿÿ8¼ºĞÌ˜.
