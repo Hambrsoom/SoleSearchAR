@@ -1,46 +1,58 @@
 
-x
-java:S1450*"[Remove the "myanchornode" field and declare it as a local variable in the relevant methods.(—’—€8Âòú¡—.
-n	java:S1166"TRename this field "arl_saved" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù—¥ğúÿÿÿÿ
-q
-java:S1450/"TRemove the "myhit" field and declare it as a local variable in the relevant methods.(Æ Úš8Âòú¡—.
-X
-java:S1854Î"5Remove this useless assignment to local variable "n".(ïÀ‡›úÿÿÿÿ8©ş¨¯–.
-T
-java:S1128"8Remove this unused import 'android.app.ActivityManager'.(•è‡`8Æ·Ó¨—.
-J
-java:S1604J"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8ä —.
-S
-java:S1144Â"0Remove this unused private "resetLayout" method.(œÈ¬…şÿÿÿÿ8Á¤¨—.
-X
-java:S1068("6Remove this unused "MIN_OPENGL_VERSION" private field.(£×ªÔşÿÿÿÿ8Æ·Ó¨—.
-H
-java:S10686"-Remove this unused "arl_saved" private field.(Ù—¥ğúÿÿÿÿ
-n	java:S1168"YRename this field "fl_measurement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«À“Á
-n	java:S1165"YRename this field "measure_height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ»ˆ‡
-n	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å¨ı¦8©ş¨¯–.
+C	java:S131[""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ä —.
+n	java:S116C"YRename this field "fl_measurement" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«À“Á
 N
-java:S1128"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8Æ·Ó¨—.
-O
-java:S1128"-Remove this unused import 'android.os.Build'.(ãÇ¤Úıÿÿÿÿ8Æ·Ó¨—.
-t
-java:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ù—¥ğúÿÿÿÿ
-M
-java:S1068*"0Remove this unused "myanchornode" private field.(—’—€8Âòú¡—.
-q	java:S116+"WRename this field "form_numbers" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¾œçøÿÿÿÿ
+java:S1128"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8Æ·Ó¨—.
+n	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å¨ı¦8©ş¨¯–.
 D
-java:S1068'"'Remove this unused "TAG" private field.(åùà8Æ·Ó¨—.
+java:S10682"'Remove this unused "TAG" private field.(åùà8Æ·Ó¨—.
+H
+java:S1068A"-Remove this unused "arl_saved" private field.(Ù—¥ğúÿÿÿÿ
+n	java:S116@"YRename this field "measure_height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ»ˆ‡
 X
-java:S1128";Remove this unused import 'android.os.Build.VERSION_CODES'.(Ô®²¥8Æ·Ó¨—.
+java:S1854‚"5Remove this useless assignment to local variable "n".(ïÀ‡›úÿÿÿÿ8©ş¨¯–.
+M
+java:S10685"0Remove this unused "myanchornode" private field.(—’—€8Âòú¡—.
+x
+java:S14505"[Remove the "myanchornode" field and declare it as a local variable in the relevant methods.(—’—€8Âòú¡—.
+c
+java:S2147ß"ECombine this catch with the one at line 221, which has the same body.(ï­£Ä8ûƒ ™.
+F
+java:S1148à"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ûƒ ™.
+@
+java:S16598"%Declare "anchor2" on a separate line.(¸ÿïûÿÿÿÿ
+X
+java:S10683"6Remove this unused "MIN_OPENGL_VERSION" private field.(£×ªÔşÿÿÿÿ8Æ·Ó¨—.
+F
+java:S1068:")Remove this unused "myhit" private field.(Æ Úš8Âòú¡—.
+F
+java:S1068H"+Remove this unused "message" private field.(ù„è¿ûÿÿÿÿ
+n	java:S116A"TRename this field "arl_saved" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù—¥ğúÿÿÿÿ
+I
+java:S1075×"&Remove this hard-coded path-delimiter.(Áà…ÿÿÿÿÿ8ûƒ ™.
+F
+java:S1148Ş"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ûƒ ™.
+q
+java:S1450:"TRemove the "myhit" field and declare it as a local variable in the relevant methods.(Æ Úš8Âòú¡—.
+t
+java:S3776K"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¨Œşÿÿÿÿ8®™.
+O
+java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8Æ·Ó¨—.
+q	java:S1166"WRename this field "form_numbers" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ¾œçøÿÿÿÿ
 O
 java:S1128
-"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8Æ·Ó¨—.
-@
-java:S1659-"%Declare "anchor2" on a separate line.(¸ÿïûÿÿÿÿ
-F
-java:S1068/")Remove this unused "myhit" private field.(Æ Úš8Âòú¡—.
-F
-java:S1068:"+Remove this unused "message" private field.(ù„è¿ûÿÿÿÿ
-C	java:S131M""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ä —.
+"-Remove this unused import 'android.os.Build'.(ãÇ¤Úıÿÿÿÿ8Æ·Ó¨—.
+X
+java:S1128";Remove this unused import 'android.os.Build.VERSION_CODES'.(Ô®²¥8Æ·Ó¨—.
+~
+java:S1450E"\Remove the "screenShotBtn" field and declare it as a local variable in the relevant methods.(úß³×ÿÿÿÿÿ8¯÷™.
+T
+java:S1128"8Remove this unused import 'android.app.ActivityManager'.(•è‡`8Æ·Ó¨—.
+S
+java:S1144ö"0Remove this unused private "resetLayout" method.(œÈ¬…şÿÿÿÿ8Á¤¨—.
+J
+java:S1604X"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8ä —.
+t
+java:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ù—¥ğúÿÿÿÿ
 Q
-java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è8Æ·Ó¨—.
+java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è8Æ·Ó¨—.

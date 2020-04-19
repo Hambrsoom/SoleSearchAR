@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_record"
-        android:icon="@drawable/ic_folder_black_24dp"
-        android:title="@string/title_folder" />
+        android:id="@+id/navigation_measure"
+        android:icon="@drawable/ruler"
+        android:title="@string/title_measure" />
 
     <item
         android:id="@+id/navigation_photo"
@@ -17,13 +16,7 @@
         android:title="@string/title_photo" />
 
     <item
-        android:id="@+id/navigation_save"
-        android:icon="@drawable/ic_file_download_black_24dp"
-        android:title="@string/title_save" />
-
-    <item
         android:id="@+id/navigation_email"
         android:icon="@drawable/ic_mail_black_24dp"
         android:title="@string/title_email" />
-
 </menu>

@@ -24,17 +24,26 @@ import android.graphics.Matrix;
 import android.graphics.Typeface;
 
 import android.media.ImageReader.OnImageAvailableListener;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.SystemClock;
 import android.util.Size;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Vector;
 
@@ -52,6 +61,8 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     private Integer sensorOrientation;
     private ICognitiveServicesClassifier classifier;
     private BorderedText borderedText;
+    private Button screenShotBtn;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -62,8 +73,9 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         demo.tensorflow.org.customvision_sample.BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(0);
+        MenuItem menuItem = menu.getItem(2);
         menuItem.setChecked(true);
+
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -71,21 +83,16 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        Intent intent2 = new Intent(ClassifierActivity.this, MainActivity.class);
+                        Intent intent2 = new Intent(ClassifierActivity.this, ActivityOne.class);
                         startActivity(intent2);
                         break;
 
-                    case R.id.navigation_record:
-                        Intent intent1 = new Intent(ClassifierActivity.this, ActivityOne.class);
+                    case R.id.navigation_measure:
+                        Intent intent1 = new Intent(ClassifierActivity.this, MainActivity.class);
                         startActivity(intent1);
                         break;
 
                     case R.id.navigation_photo:
-                        break;
-
-                    case R.id.navigation_save:
-                        Intent intent3 = new Intent(ClassifierActivity.this, ActivityThree.class);
-                        startActivity(intent3);
                         break;
 
                     case R.id.navigation_email:
@@ -99,6 +106,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             }
         });
     }
+
 
     @Override
     public synchronized void onStop() {

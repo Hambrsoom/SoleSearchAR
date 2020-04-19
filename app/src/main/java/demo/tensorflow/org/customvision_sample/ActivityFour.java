@@ -1,6 +1,8 @@
 package demo.tensorflow.org.customvision_sample;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -87,7 +89,7 @@ public class ActivityFour extends AppCompatActivity {
                         Uri.parse("mailto:" + editTO.getText().toString()));
                 intent.putExtra(Intent.EXTRA_SUBJECT, editSubject.getText().toString());
                 intent.putExtra(Intent.EXTRA_TEXT,editMessage.getText().toString());
-                intent.putExtra(Intent.EXTRA_STREAM,imageUri);
+                intent.putExtra(Intent.EXTRA_STREAM,Uri.parse("file:///mnt/sdcard/Pictures/1.jpg"));
                 startActivity(intent);
             }
         });
@@ -97,7 +99,7 @@ public class ActivityFour extends AppCompatActivity {
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(4);
+        MenuItem menuItem = menu.getItem(3);
         menuItem.setChecked(true);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -105,23 +107,18 @@ public class ActivityFour extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.navigation_home:
-                        Intent intent0 = new Intent(ActivityFour.this, MainActivity.class);
+                        Intent intent0 = new Intent(ActivityFour.this, ActivityOne.class);
                         startActivity(intent0);
                         break;
 
-                    case R.id.navigation_record:
-                        Intent intent1 = new Intent(ActivityFour.this, ActivityOne.class);
+                    case R.id.navigation_measure:
+                        Intent intent1 = new Intent(ActivityFour.this, MainActivity.class);
                         startActivity(intent1);
                         break;
 
                     case R.id.navigation_photo:
                         Intent intent2 = new Intent(ActivityFour.this, ClassifierActivity.class);
                         startActivity(intent2);
-                        break;
-
-                    case R.id.navigation_save:
-                        Intent intent3 = new Intent(ActivityFour.this, ActivityThree.class);
-                        startActivity(intent3);
                         break;
 
                     case R.id.navigation_email:

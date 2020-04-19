@@ -39,7 +39,7 @@
                     android:textAlignment="center"
                     android:textColor="#fff"
                     android:textSize="30sp"
-                    tools:visibility="gone" />
+                    tools:visibility="visible" />
             </RelativeLayout>
 
             <LinearLayout
@@ -47,6 +47,12 @@
                 android:layout_height="match_parent"
                 android:gravity="bottom"
                 android:orientation="vertical">
+                <Button
+                    android:id="@+id/screenShot_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/bottomNavView_Bar"
+                    android:text="Screen Shoot" />
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/bottomNavView_Bar"

@@ -2,10 +2,12 @@ package demo.tensorflow.org.customvision_sample;
 
 import android.Manifest;
 import android.app.Fragment;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
@@ -22,11 +24,13 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Trace;
+import android.util.Log;
 import android.util.Size;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,6 +39,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Date;
 
@@ -74,6 +79,10 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
   protected byte[][] yuvBytes=new byte[3][];
   protected int yRowStride;
 
+  private File imagePath;
+
+  private ImageView imageView;
+
 
   private Button button;
   private Button screenShotBtn;
@@ -83,46 +92,53 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
     super.onCreate(null);
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-//    screenShotBtn = findViewById(R.id.screenShotBtn);
-//    screenShotBtn.setOnClickListener(new View.OnClickListener() {
-//      @Override
-//      public void onClick(View v) {
-//        screenshot();
-//      }
-//    });
     setContentView(R.layout.activity_camera);
     if (hasPermission()) {
       setFragment();
     } else {
       requestPermission();
     }
+      screenShotBtn = (Button) findViewById(R.id.screenShot_btn);
+
+      screenShotBtn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+          if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+            Toast.makeText(getApplicationContext(),"Permission is allowed",Toast.LENGTH_SHORT).show();
+          }
+          View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+          Bitmap bitmap = getScreenShot(rootView);
+          Date date = new Date();
+          CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
+          store(bitmap,now+".png");
+
+      }
+    });
+
 
     final AppCompatActivity activity = this;
   }
+  public static Bitmap getScreenShot(View view)
+  {
+    View screenView = view.getRootView();
+    screenView.setDrawingCacheEnabled(true);
+    Bitmap bitmap = Bitmap.createBitmap(screenView.getDrawingCache());
+    screenView.setDrawingCacheEnabled(false);
+    return bitmap;
+  }
 
-  private void screenshot(){
-    Date date = new Date();
-    CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss",date);
-    String filename = Environment.getExternalStorageDirectory() + "/ScreenShooter/"+now+".jpg";
-
-    View root = getWindow().getDecorView();
-    root.setDrawingCacheEnabled(true);
-    Bitmap bitmap =  Bitmap.createBitmap(root.getDrawingCache());
-    root.setDrawingCacheEnabled(false);
-
-    File file = new File(filename);
-    file.getParentFile().mkdirs();
-
-    try {
-      FileOutputStream fileOutputStream = new FileOutputStream(file);
-      bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
-      fileOutputStream.flush();
-      fileOutputStream.close();
-
-      Uri uri = Uri.fromFile(file);
-      Intent intent = new Intent(Intent.ACTION_VIEW);
-      intent.setDataAndType(uri, "image/*");
-      startActivity(intent);
+  public void store(Bitmap bitmap, String fileName){
+    String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/MyFiles/SoleSearch";
+    File dir = new File(dirPath);
+    if(!dir.exists()){
+      dir.mkdirs();
+    }
+    File file = new File(dirPath+"/"+fileName);
+    try{
+      FileOutputStream fos = new FileOutputStream(file);
+      bitmap.compress(Bitmap.CompressFormat.PNG,100, fos);
+      fos.flush();
+      fos.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     } catch (IOException e) {
@@ -162,6 +178,8 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
     };
     processImageRGBbytes(rgbBytes);
   }
+
+
 
   /**
    * Callback for Camera2 API

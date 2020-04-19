@@ -7,9 +7,6 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,12 +16,19 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <Button
+                    android:id="@+id/screenShot_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                android:text="Screen Shoot" />
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_marginBottom="50dp"-->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </RelativeLayout>
+<!--            <Button-->
+<!--                android:id="@+id/callMe"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Button" />-->
         </RelativeLayout>
     </FrameLayout>
 

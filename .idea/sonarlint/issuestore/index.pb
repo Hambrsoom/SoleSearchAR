@@ -27,7 +27,13 @@ P
 Kapp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityFour.java,d\1\d11aded358495cdf482db7ce3365d9f9a6a5f767
 z
 Japp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityOne.java,7\c\7c1e6802435c24cb6af2b96842fe6a166cd696eb
-|
-Lapp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityThree.java,f\9\f9a9399e8823ed5b9d41cab9a97dc14c5db31718
+Å
+Qapp/src/main/java/demo/tensorflow/org/customvision_sample/AutoFitTextureView.java,0\e\0e2f702239d878e685843b142a57825e8d324d3d
+ò
+happ/src/main/java/demo/tensorflow/org/customvision_sample/MSCognitiveServicesCustomVisionClassifier.java,a\8\a8e0d10b194854afbed56d258ebce0944cea6272
+ç
+]app/src/main/java/demo/tensorflow/org/customvision_sample/LegacyCameraConnectionFragment.java,a\7\a7bbf2e70957038c6c8b235514222345442db25a
+y
+Iapp/src/main/java/demo/tensorflow/org/customvision_sample/Classifier.java,d\0\d06c9d78841eb630507315b0a445fa4b985ee5a2
 z
-Japp/src/main/java/demo/tensorflow/org/customvision_sample/ActivityTwo.java,7\c\7cfc213cfef7b290e4e8b6d3dc1d912a361df25e
+Japp/src/main/java/demo/tensorflow/org/customvision_sample/OverlayView.java,0\6\0665f4edb54a962c95585967ba5ff07ba014d77c

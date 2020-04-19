@@ -1,17 +1,23 @@
 package demo.tensorflow.org.customvision_sample;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +30,13 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -55,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
     private float fl_measurement = 0.0f;
 
+    private  Button screenShotBtn;
+
+
     private String message;
 
     @Override
@@ -67,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         demo.tensorflow.org.customvision_sample.BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(0);
+        MenuItem menuItem = menu.getItem(1);
         menuItem.setChecked(true);
 
 
@@ -76,12 +90,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-
-                        break;
-
-                    case R.id.navigation_record:
                         Intent intent1 = new Intent(MainActivity.this, ActivityOne.class);
                         startActivity(intent1);
+                        break;
+
+                    case R.id.navigation_measure:
                         break;
 
                     case R.id.navigation_photo:
@@ -89,19 +102,29 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent2);
                         break;
 
-                    case R.id.navigation_save:
-                        Intent intent3 = new Intent(MainActivity.this, ActivityThree.class);
-                        startActivity(intent3);
-                        break;
-
                     case R.id.navigation_email:
                         Intent intent4 = new Intent(MainActivity.this, ActivityFour.class);
                         startActivity(intent4);
                         break;
                 }
-
-
                 return false;
+            }
+        });
+
+        screenShotBtn = (Button) findViewById(R.id.screenShot_btn);
+
+        screenShotBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(getApplicationContext(),"Permission is allowed",Toast.LENGTH_SHORT).show();
+                }
+                View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+                Bitmap bitmap = getScreenShot(rootView);
+                Date date = new Date();
+                CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
+                store(bitmap,now+".png");
+
             }
         });
 
@@ -171,6 +194,35 @@ public class MainActivity extends AppCompatActivity {
     private void iniComponent(){
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_ux_fragment);
         descriptionView = (TextView) findViewById(R.id.text);
+    }
+
+
+    public static Bitmap getScreenShot(View view)
+    {
+        View screenView = view.getRootView();
+        screenView.setDrawingCacheEnabled(true);
+        Bitmap bitmap = Bitmap.createBitmap(screenView.getDrawingCache());
+        screenView.setDrawingCacheEnabled(false);
+        return bitmap;
+    }
+
+    public void store(Bitmap bitmap, String fileName){
+        String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/MyFiles/SoleSearch";
+        File dir = new File(dirPath);
+        if(!dir.exists()){
+            dir.mkdirs();
+        }
+        File file = new File(dirPath+"/"+fileName);
+        try{
+            FileOutputStream fos = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG,100, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
