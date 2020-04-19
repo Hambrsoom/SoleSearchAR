@@ -8,6 +8,8 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -15,14 +17,27 @@ import android.widget.TextView;
  */
 
 public class ActivityOne extends AppCompatActivity {
+    private Button aboutUsButton;
+    private TextView aboutUs;
+    private TextView welcomeText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-        TextView title = (TextView) findViewById(R.id.activityTitle1);
-        title.setText("This is ActivityOne");
+        aboutUsButton = findViewById(R.id.aboutUsBtn);
+        aboutUs = findViewById(R.id.about_us_text);
+        welcomeText = findViewById(R.id.welcome_text);
+
+        aboutUsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                welcomeText.setVisibility(View.GONE);
+                aboutUs.setVisibility(View.VISIBLE);
+
+            }
+        });
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

@@ -66,7 +66,8 @@
             android:layout_marginLeft="125dp"
             android:layout_marginRight="125dp"
             android:padding="15dp"
-            android:textColor="@color/colorAccent"
+            android:background="@drawable/ic_text_round_blue"
+            android:textColor="@color/colorWhite"
             android:textSize="15sp"
             />
 
@@ -84,10 +85,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="600dp"
-            android:background="@drawable/bg_shape"
+            android:background="@drawable/ic_text_round_green"
             android:padding="15dp"
             android:text="send"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorWhite"
             android:textSize="25sp" />
 
         <RelativeLayout
