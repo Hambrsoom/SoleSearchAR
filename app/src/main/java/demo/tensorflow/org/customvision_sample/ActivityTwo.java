@@ -39,7 +39,7 @@ public class ActivityTwo extends AppCompatActivity {
                         startActivity(intent0);
                         break;
 
-                    case R.id.navigation_record:
+                    case R.id.navigation_measure:
                         Intent intent1 = new Intent(ActivityTwo.this, ActivityOne.class);
                         startActivity(intent1);
                         break;
@@ -48,13 +48,8 @@ public class ActivityTwo extends AppCompatActivity {
 
                         break;
 
-                    case R.id.navigation_save:
-                        Intent intent3 = new Intent(ActivityTwo.this, ActivityThree.class);
-                        startActivity(intent3);
-                        break;
-
                     case R.id.navigation_email:
-                        Intent intent4 = new Intent(ActivityTwo.this, ActivityFour.class);
+                        Intent intent4 = new Intent(ActivityTwo.this, ActivityThree.class);
                         startActivity(intent4);
                         break;
                 }

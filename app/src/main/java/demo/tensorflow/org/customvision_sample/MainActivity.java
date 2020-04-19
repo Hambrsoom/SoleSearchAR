@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
                         break;
 
-                    case R.id.navigation_record:
+                    case R.id.navigation_measure:
                         Intent intent1 = new Intent(MainActivity.this, ActivityOne.class);
                         startActivity(intent1);
                         break;
@@ -97,13 +97,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent2);
                         break;
 
-                    case R.id.navigation_save:
-                        Intent intent3 = new Intent(MainActivity.this, ActivityThree.class);
-                        startActivity(intent3);
-                        break;
-
                     case R.id.navigation_email:
-                        Intent intent4 = new Intent(MainActivity.this, ActivityFour.class);
+                        Intent intent4 = new Intent(MainActivity.this, ActivityThree.class);
                         startActivity(intent4);
                         break;
                 }
