@@ -47,12 +47,14 @@
                 android:layout_height="match_parent"
                 android:gravity="bottom"
                 android:orientation="vertical">
-                <Button
+                <ImageButton
                     android:id="@+id/screenShot_btn"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/bottomNavView_Bar"
-                    android:text="Screen Shoot" />
+                    android:src="@drawable/ic_fullscreen_24px_1"
+                    android:layout_marginLeft="330dp"
+                    android:background="@drawable/ic_text_circular"
+                    />
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/bottomNavView_Bar"

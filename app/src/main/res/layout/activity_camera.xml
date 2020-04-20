@@ -16,12 +16,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                    android:id="@+id/screenShot_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="620dp"
-                    android:text="Screen Shoot" />
+            <ImageButton
+                android:id="@+id/screenShot_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_fullscreen_24px_1"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="330dp"
+                android:background="@drawable/ic_text_circular"
+                />
+
         </RelativeLayout>
     </FrameLayout>
 

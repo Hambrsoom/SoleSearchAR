@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     private float fl_measurement = 0.0f;
 
-    private  Button screenShotBtn;
+    private ImageButton screenShotBtn;
 
 
     private String message;
@@ -111,20 +112,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        screenShotBtn = (Button) findViewById(R.id.screenShot_btn);
+        screenShotBtn = (ImageButton) findViewById(R.id.screenShot_btn);
 
         screenShotBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-                    Toast.makeText(getApplicationContext(),"Permission is allowed",Toast.LENGTH_SHORT).show();
-                }
                 View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
                 Bitmap bitmap = getScreenShot(rootView);
                 Date date = new Date();
                 CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
                 store(bitmap,now+".png");
-
+                Toast.makeText(getApplicationContext(),"You have taken a screenshot and it is stored in your phone!",Toast.LENGTH_SHORT).show();
             }
         });
 

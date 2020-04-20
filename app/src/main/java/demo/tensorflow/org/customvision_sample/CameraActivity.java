@@ -30,6 +30,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -85,33 +86,29 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
 
 
   private Button button;
-  private Button screenShotBtn;
+  private ImageButton screenShotBtn;
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
     LOGGER.d("onCreate " + this);
     super.onCreate(null);
     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
     setContentView(R.layout.activity_camera);
     if (hasPermission()) {
       setFragment();
     } else {
       requestPermission();
     }
-      screenShotBtn = (Button) findViewById(R.id.screenShot_btn);
+      screenShotBtn = (ImageButton) findViewById(R.id.screenShot_btn);
 
       screenShotBtn.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-          if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
-            Toast.makeText(getApplicationContext(),"Permission is allowed",Toast.LENGTH_SHORT).show();
-          }
           View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
           Bitmap bitmap = getScreenShot(rootView);
           Date date = new Date();
           CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
           store(bitmap,now+".png");
-
+          Toast.makeText(getApplicationContext(),"You have taken a screenshot and it it stored in your phone!",Toast.LENGTH_SHORT).show();
       }
     });
 
