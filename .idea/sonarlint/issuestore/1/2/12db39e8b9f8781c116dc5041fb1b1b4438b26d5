@@ -1,68 +1,68 @@
 
+i
+java:S11282"GRemove this unused import 'androidx.navigation.ui.AppBarConfiguration'.(È¸›şÿÿÿÿ8åÙ“§—.
+I
+java:S1075…"&Remove this hard-coded path-delimiter.(Áà…ÿÿÿÿÿ8ºé§™.
+`
+java:S11280">Remove this unused import 'androidx.navigation.NavController'.(ˆç×ƒÿÿÿÿÿ8åÙ“§—.
+F
+java:S1148Œ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ºé§™.
+c
+java:S2147"ECombine this catch with the one at line 139, which has the same body.(ï­£Ä8ºé§™.
+^
+java:S1854t"<Remove this useless assignment to local variable "activity".(ôÊ×Ñøÿÿÿÿ8ºé§™.
 O
 java:S1128"3Remove this unused import 'android.content.Intent'.(³ğ‹G8ªï˜.
-i
-java:S11281"GRemove this unused import 'androidx.navigation.ui.AppBarConfiguration'.(È¸›şÿÿÿÿ8åÙ“§—.
+b
+java:S11283"@Remove this unused import 'androidx.navigation.ui.NavigationUI'.(„¾¯Êüÿÿÿÿ8åÙ“§—.
+J
+java:S1068U"-Remove this unused "imageView" private field.(øû¯8ÔÒï˜.
+{	java:S135Ò"YReduce the total number of break and continue statements in this loop to use at most one.(ö›ÿªüÿÿÿÿ8ºé§™.
 F
-java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8­õÉï˜.
-?
-java:S1116¿"Remove this empty statement.(‡ÈœÍûÿÿÿÿ8Šà±ï˜.
-¤
-java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(à‹Âëøÿÿÿÿ8ñêëî˜.
-Ÿ
-java:S1186½"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎõÆ´8Šà±ï˜.
-G
-java:S1068W"*Remove this unused "button" private field.(ÈòÉ¹8ñêëî˜.
+java:S1604õ"(Make this anonymous inner class a lambda(šµæê8ºé§™.
+~
+java:S1450Y"\Remove the "screenShotBtn" field and declare it as a local variable in the relevant methods.(òĞñ°şÿÿÿÿ8¦£€ï˜.
+P
+java:S1199¥"-Extract this nested code block into a method.(²®¿ùÿÿÿÿ8ºé§™.
+€
+java:S1128%"^Remove this unused import 'com.google.android.material.bottomnavigation.BottomNavigationView'.(ºØÇÿÿÿÿÿ8åÙ“§—.
+\
+java:S3400»"9Remove this method and declare a constant for this value.(¡×¨„üÿÿÿÿ8ºé§™.
+n
+java:S1301¤"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8ºé§™.
+c
+java:S1128"FRemove this unused import 'android.content.ActivityNotFoundException'.(Û‚¨8¯½õè˜.
+i
+java:S1192§"KDefine a constant instead of duplicating this literal "Exception!" 3 times.(–©ñê8ºé§™.
+E
+java:S1604ª"(Make this anonymous inner class a lambda(Óè—Z8ºé§™.
 O
-java:S1481w"-Remove this unused "activity" local variable.(ôÊ×Ñøÿÿÿÿ8ñêëî˜.
+java:S1481t"-Remove this unused "activity" local variable.(ôÊ×Ñøÿÿÿÿ8ºé§™.
+¤
+java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Û¢Òøÿÿÿÿ8ºé§™.
+J
+java:S1068S"-Remove this unused "imagePath" private field.(¸™Å©8ªï˜.
+¤
+java:S1186¹"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(à‹Âëøÿÿÿÿ8ºé§™.
+N
+java:S1128",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ8ªï˜.
+D	java:S131¤""Add a default case to this switch.(×ö³–úÿÿÿÿ8ºé§™.
+F
+java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ºé§™.
+?
+java:S1116¼"Remove this empty statement.(‡ÈœÍûÿÿÿÿ8ºé§™.
 O
 java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ªï˜.
-n
-java:S1301§"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8Šà±ï˜.
-c
-java:S2147"ECombine this catch with the one at line 142, which has the same body.(ï­£Ä8­õÉï˜.
-~
-java:S1450X"\Remove the "screenShotBtn" field and declare it as a local variable in the relevant methods.(úß³×ÿÿÿÿÿ8¦£€ï˜.
-J
-java:S1068T"-Remove this unused "imageView" private field.(øû¯8ÔÒï˜.
-b
-java:S11282"@Remove this unused import 'androidx.navigation.ui.NavigationUI'.(„¾¯Êüÿÿÿÿ8åÙ“§—.
-\
-java:S3400¾"9Remove this method and declare a constant for this value.(¡×¨„üÿÿÿÿ8Šà±ï˜.
-i
-java:S1192ª"KDefine a constant instead of duplicating this literal "Exception!" 3 times.(–©ñê8Šà±ï˜.
-J
-java:S1068R"-Remove this unused "imagePath" private field.(¸™Å©8ªï˜.
-¤
-java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Û¢Òøÿÿÿÿ8Šà±ï˜.
-]
-java:S11280";Remove this unused import 'androidx.navigation.Navigation'.(ÄíÚÀÿÿÿÿÿ8åÙ“§—.
-S
-java:S1128*"1Remove this unused import 'java.io.OutputStream'.(Ó ³ÿÿÿÿÿ8ªï˜.
 U
 java:S1128
 "3Remove this unused import 'android.graphics.Color'.(øãíòşÿÿÿÿ8»Ëàî˜.
-I
-java:S1075ˆ"&Remove this hard-coded path-delimiter.(Áà…ÿÿÿÿÿ8‡®èï˜.
-^
-java:S1854w"<Remove this useless assignment to local variable "activity".(ôÊ×Ñøÿÿÿÿ8ñêëî˜.
-F
-java:S1148‘"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8­õÉï˜.
-{	java:S135Õ"YReduce the total number of break and continue statements in this loop to use at most one.(ö›ÿªüÿÿÿÿ8Šà±ï˜.
-E
-java:S1604­"(Make this anonymous inner class a lambda(Óè—Z8Šà±ï˜.
-F
-java:S1604ø"(Make this anonymous inner class a lambda(šµæê8ÔÒï˜.
-`
-java:S1128/">Remove this unused import 'androidx.navigation.NavController'.(ˆç×ƒÿÿÿÿÿ8åÙ“§—.
+]
+java:S11281";Remove this unused import 'androidx.navigation.Navigation'.(ÄíÚÀÿÿÿÿÿ8åÙ“§—.
+Ÿ
+java:S1186º"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÎõÆ´8Šà±ï˜.
 i
-java:S2142‹"FEither re-interrupt this method or rethrow the "InterruptedException".(Ñ‘Åüÿÿÿÿ8Šà±ï˜.
-c
-java:S1128"FRemove this unused import 'android.content.ActivityNotFoundException'.(Û‚¨8¯½õè˜.
-D	java:S131§""Add a default case to this switch.(×ö³–úÿÿÿÿ8Šà±ï˜.
-N
-java:S1128",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ8ªï˜.
-P
-java:S1199¨"-Extract this nested code block into a method.(²®¿ùÿÿÿÿ8Šà±ï˜.
-€
-java:S1128$"^Remove this unused import 'com.google.android.material.bottomnavigation.BottomNavigationView'.(ºØÇÿÿÿÿÿ8åÙ“§—.
+java:S2142ˆ"FEither re-interrupt this method or rethrow the "InterruptedException".(Ñ‘Åüÿÿÿÿ8ºé§™.
+G
+java:S1068X"*Remove this unused "button" private field.(ÈòÉ¹8ñêëî˜.
+S
+java:S1128+"1Remove this unused import 'java.io.OutputStream'.(Ó ³ÿÿÿÿÿ8ªï˜.
