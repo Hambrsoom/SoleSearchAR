@@ -1,7 +1,2 @@
-Apple
-Banana
-Coconut
-Orange
-Passionfruit
-Pineapple
-Strawberry
+Nike
+puma

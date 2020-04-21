@@ -4,45 +4,107 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_above="@+id/bottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:textSize="30sp"
-            android:id="@+id/activityTitle4"
-            android:textAlignment="center"/>
+            android:padding="10dp"
+            android:background="@drawable/bg_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="20sp"
+                android:gravity="center" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/bottomBar"
-        android:layout_alignParentBottom="true">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_to"
+                android:background="@android:color/transparent"/>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+        </LinearLayout>
+
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/bottomNavView_Bar"
-            android:background="@drawable/white_grey_border_top"
-            app:menu="@menu/bottom_nav_menu">
+            android:layout_height="wrap_content"
+            android:id="@+id/text_subject"
+            android:hint="Subject"
+            android:padding="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/bg_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/text_message"
+            android:layout_weight ="1"
+            android:hint="Message"
+            android:padding="10dp"
+            android:gravity="top"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/bg_shape"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pick_Image_btn"
+            android:text="Choose Image"
+            android:layout_marginTop="380dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginRight="125dp"
+            android:padding="15dp"
+            android:background="@drawable/ic_text_round_blue"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="450dp"
+            android:id="@+id/image"
+            />
 
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="600dp"
+            android:background="@drawable/ic_text_round_green"
+            android:padding="15dp"
+            android:text="send"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp" />
+
+        <RelativeLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavView_Bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_grey_border_top"
+                app:menu="@menu/bottom_nav_menu">
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </RelativeLayout>
     </RelativeLayout>
-    </RelativeLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
