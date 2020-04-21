@@ -5,19 +5,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <demo.tensorflow.org.customvision_sample.OverlayView
+    <demo.tensorflow.org.sole_search.OverlayView
         android:id="@+id/debug_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true" />
 
-    <demo.tensorflow.org.customvision_sample.AutoFitTextureView
+    <demo.tensorflow.org.sole_search.AutoFitTextureView
         android:id="@+id/texture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
-    <demo.tensorflow.org.customvision_sample.RecognitionScoreView
+    <demo.tensorflow.org.sole_search.RecognitionScoreView
         android:id="@+id/results"
         android:layout_width="match_parent"
         android:layout_height="50dp"

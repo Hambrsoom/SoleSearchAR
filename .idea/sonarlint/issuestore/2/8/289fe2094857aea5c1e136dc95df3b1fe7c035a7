@@ -1,12 +1,0 @@
-
-t
-java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(Ô£é­ûÿÿÿÿ
-€
-java:S1149."eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Ô£é­ûÿÿÿÿ
-P
-java:S1128"5Remove this unused import 'org.tensorflow.Operation'.(Ñ¾ãıÿÿÿÿ
-J
-java:S1128 "5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg
-`	java:S112e"FDefine and throw a dedicated exception instead of using a generic one.(ÑÆõ¯üÿÿÿÿ
-L
-java:S1874£".Remove this use of "Assert"; it is deprecated.(Œˆ¼•8‘åÉŸ™.
