@@ -95,6 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="600dp"
+            android:layout_marginBottom="100dp"
             android:background="@drawable/ic_text_round_green"
             android:padding="15dp"
             android:text="send"
