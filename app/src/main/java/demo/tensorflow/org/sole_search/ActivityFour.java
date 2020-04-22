@@ -85,7 +85,8 @@ public class ActivityFour extends AppCompatActivity {
                         Uri.parse("mailto:" + editTO.getText().toString()));
                 intent.putExtra(Intent.EXTRA_SUBJECT, editSubject.getText().toString());
                 intent.putExtra(Intent.EXTRA_TEXT,editMessage.getText().toString());
-                intent.putExtra(Intent.EXTRA_STREAM,Uri.parse("file:///mnt/sdcard/Pictures/1.jpg"));
+                //intent.putExtra(Intent.EXTRA_STREAM,Uri.parse("file:///mnt/sdcard/Pictures/1.jpg"));
+
                 startActivity(intent);
             }
         });
