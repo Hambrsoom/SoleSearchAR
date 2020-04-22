@@ -35,6 +35,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -61,7 +63,7 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
     private Integer sensorOrientation;
     private ICognitiveServicesClassifier classifier;
     private BorderedText borderedText;
-    private Button screenShotBtn;
+    private ImageButton screenShotBtn;
 
 
     @Override
@@ -75,6 +77,20 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(2);
         menuItem.setChecked(true);
+
+        screenShotBtn = (ImageButton) findViewById(R.id.screenShot_btn);
+
+        screenShotBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+                Bitmap bitmap = getScreenShot(rootView);
+                Date date = new Date();
+                CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
+                store(bitmap,now+".png");
+                Toast.makeText(getApplicationContext(),"You have taken a screenshot and it it stored in your phone!",Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
@@ -106,6 +122,35 @@ public class ClassifierActivity extends CameraActivity implements OnImageAvailab
             }
         });
     }
+
+    public static Bitmap getScreenShot(View view)
+    {
+        View screenView = view.getRootView();
+        screenView.setDrawingCacheEnabled(true);
+        Bitmap bitmap = Bitmap.createBitmap(screenView.getDrawingCache());
+        screenView.setDrawingCacheEnabled(false);
+        return bitmap;
+    }
+
+    public void store(Bitmap bitmap, String fileName){
+        String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/MyFiles/SoleSearch";
+        File dir = new File(dirPath);
+        if(!dir.exists()){
+            dir.mkdirs();
+        }
+        File file = new File(dirPath+"/"+fileName);
+        try{
+            FileOutputStream fos = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG,100, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
     @Override

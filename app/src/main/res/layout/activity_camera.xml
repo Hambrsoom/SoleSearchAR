@@ -25,7 +25,6 @@
                 android:layout_marginLeft="330dp"
                 android:background="@drawable/ic_text_circular"
                 />
-
         </RelativeLayout>
     </FrameLayout>
 
