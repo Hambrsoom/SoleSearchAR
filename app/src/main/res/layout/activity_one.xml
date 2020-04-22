@@ -48,7 +48,7 @@
             android:background="@drawable/bg_shape"
             android:padding="5dp"
             android:text="@string/about_us"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textAlignment="center"
             android:visibility="gone" />
 
