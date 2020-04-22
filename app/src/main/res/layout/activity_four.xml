@@ -78,6 +78,7 @@
             android:background="@drawable/ic_text_round_blue"
             android:textColor="@color/colorWhite"
             android:textSize="15sp"
+            android:layout_centerHorizontal="true"
             />
 
         <ImageView
@@ -98,7 +99,8 @@
             android:padding="15dp"
             android:text="send"
             android:textColor="@color/colorWhite"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"/>
         </RelativeLayout>
         </ScrollView>
 
