@@ -11,11 +11,14 @@ import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.PixelCopy;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -27,6 +30,7 @@ import com.google.ar.core.Anchor;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.ArSceneView;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
@@ -117,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
         screenShotBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
-                Bitmap bitmap = getScreenShot(rootView);
+                Bitmap bitmap = getScreenShot();
                 Date date = new Date();
                 CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
                 store(bitmap,now+".png");
@@ -195,12 +198,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public static Bitmap getScreenShot(View view)
-    {
-        View screenView = view.getRootView();
-        screenView.setDrawingCacheEnabled(true);
-        Bitmap bitmap = Bitmap.createBitmap(screenView.getDrawingCache());
-        screenView.setDrawingCacheEnabled(false);
+    public Bitmap getScreenShot() {
+        ArSceneView view = arFragment.getArSceneView();
+        // Create a bitmap the size of the scene view.
+        final Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),
+                Bitmap.Config.ARGB_8888);
+        // Create a handler thread to offload the processing of the image.
+        final HandlerThread handlerThread = new HandlerThread("PixelCopier");
+        handlerThread.start();
+        // Make the request to copy.
+        PixelCopy.request(view, bitmap, (copyResult) -> {
+            if (copyResult == PixelCopy.SUCCESS) {
+                Date date = new Date();
+                CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
+                store(bitmap, now + ".png");
+            } else {
+                Toast toast = Toast.makeText(MainActivity.this,
+                        "Failed to copyPixels: " + copyResult, Toast.LENGTH_LONG);
+                toast.show();
+            }
+            handlerThread.quitSafely();
+        }, new Handler(handlerThread.getLooper()));
         return bitmap;
     }
 

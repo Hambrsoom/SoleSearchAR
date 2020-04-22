@@ -6,28 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/container"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000"
-        tools:context="demo.tensorflow.org.sole_search.CameraActivity">
+        android:layout_height="wrap_content"
+        android:id="@+id/camera"
+        android:orientation="horizontal">
 
-        <RelativeLayout
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#000"
+            tools:context="demo.tensorflow.org.sole_search.CameraActivity">
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp">
+
             <ImageButton
                 android:id="@+id/screenShot_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_fullscreen_24px_1"
-                android:layout_marginTop="100dp"
                 android:layout_marginLeft="330dp"
+                android:layout_marginTop="100dp"
                 android:background="@drawable/ic_text_circular"
-                />
-
-        </RelativeLayout>
-    </FrameLayout>
+                android:src="@drawable/ic_fullscreen_24px_1" />
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/bottomBar"
