@@ -108,7 +108,7 @@ public class CameraActivity extends AppCompatActivity implements OnImageAvailabl
           Date date = new Date();
           CharSequence now = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
           store(bitmap,now+".png");
-          Toast.makeText(getApplicationContext(),"You have taken a screenshot and it it stored in your phone!",Toast.LENGTH_SHORT).show();
+          Toast.makeText(getApplicationContext(),"A screenshot has been taken and stored at "+  "/MyFiles/SoleSearch/" +now,Toast.LENGTH_SHORT).show();
       }
     });
 
