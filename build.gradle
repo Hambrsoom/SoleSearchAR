@@ -20,7 +20,7 @@ allprojects {
 
         // Import AAR(s) from a folder next to the sample app project
         flatDir {
-            dirs "${rootDir}/../aars"
+            dirs "${rootDir}/aars"
         }
     }
 }

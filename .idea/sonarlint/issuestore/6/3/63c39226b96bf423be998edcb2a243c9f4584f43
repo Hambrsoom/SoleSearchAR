@@ -1,24 +1,24 @@
 
-D
-java:S1659")Declare "editSubject" on a separate line.(æêÅ÷úÿÿÿÿ
-F
-java:S1128"0Remove this unused import 'android.media.Image'.(ëïøÂ
->
-java:S1148K"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-D
-java:S1659")Declare "editMessage" on a separate line.(æêÅ÷úÿÿÿÿ
-<	java:S131h""Add a default case to this switch.(øå´¡ÿÿÿÿÿ
-J
-java:S1604e"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8Ç°ò®™.
-O
-java:S1128"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ
-y
-java:S1450"cRemove the "bottomNavigationView" field and declare it as a local variable in the relevant methods.(ê¥ÎÚ
-_
-java:S2259F"BA "NullPointerException" could be thrown; "data" is nullable here.(¿´“¿8Ç°ò®™.
-I
-java:S1659".Declare "btnChoosePicture" on a separate line.(úü´™üÿÿÿÿ
-r
-java:S1450"WRemove the "imageUri" field and declare it as a local variable in the relevant methods.(Ø°´þÿÿÿÿ
 G
 java:S1068",Remove this unused "imageUri" private field.(Ø°´þÿÿÿÿ
+r
+java:S1450"WRemove the "imageUri" field and declare it as a local variable in the relevant methods.(Ø°´þÿÿÿÿ
+O
+java:S1128"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'android.media.Image'.(ëïøÂ
+D
+java:S1659")Declare "editSubject" on a separate line.(æêÅ÷úÿÿÿÿ
+y
+java:S1450"cRemove the "bottomNavigationView" field and declare it as a local variable in the relevant methods.(ê¥ÎÚ
+<	java:S131i""Add a default case to this switch.(øå´¡ÿÿÿÿÿ
+>
+java:S1148K"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+_
+java:S2259F"BA "NullPointerException" could be thrown; "data" is nullable here.(¿´“¿8Ç°ò®™.
+J
+java:S1604f"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8Ç°ò®™.
+I
+java:S1659".Declare "btnChoosePicture" on a separate line.(úü´™üÿÿÿÿ
+D
+java:S1659")Declare "editMessage" on a separate line.(æêÅ÷úÿÿÿÿ

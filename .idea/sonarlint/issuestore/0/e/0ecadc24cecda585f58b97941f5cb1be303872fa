@@ -1,19 +1,19 @@
 
-V	java:S107#"<Method has 9 parameters, which is greater than 7 authorized.(ÅÃÇ¼ûÿÿÿÿ
-N
-java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ
+J
+java:S1128"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg
+b	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¥œ
 k	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÉ‰µûÿÿÿÿ
 f	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÄğ–
 t	java:S115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(§¨²×úÿÿÿÿ
-I
-java:S1128"4Remove this unused import 'android.graphics.Bitmap'.(¾ì
+Q	java:S125i"<This block of commented-out lines of code should be removed.(Ùí’°
+N
+java:S1128"3Remove this unused import 'android.os.Environment'.(É¿‹Ãûÿÿÿÿ
+V	java:S107#"<Method has 9 parameters, which is greater than 7 authorized.(ÅÃÇ¼ûÿÿÿÿ
 J
 java:S1128"4Remove this unused import 'android.graphics.Matrix'.(ÑÏ’
-P
-java:S1118":Add a private constructor to hide the implicit public one.(ò’çÎ
-b	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¥œ
-J
-java:S1128"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg
-Q	java:S125i"<This block of commented-out lines of code should be removed.(Ùí’°
+I
+java:S1128"4Remove this unused import 'android.graphics.Bitmap'.(¾ì
 ?
 java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ò’çÎ
