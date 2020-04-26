@@ -8,7 +8,7 @@ way of identify a shoe print with their phone is something that SoleSearch striv
 - [Initial Sketches](https://drive.google.com/file/d/1MloXdvhYurrsXEMxdIuRhPk6Bq7qmFPP/view?usp=sharing)
 - [Interactive Figma Prototype](https://www.figma.com/proto/9u4p4v7zWmakrTl72J0Hqo/SOEN-357-Project?node-id=5%3A0&scaling=scale-down)
 
-## Dependencies
+## Requirements
 - Android Studio
 - Gradle
 
