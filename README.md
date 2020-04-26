@@ -1,8 +1,7 @@
 # SoleSearch :mag_right:
 SoleSearch is an Android application developed to attempt to integrate interactive technology namely augmented reality (AR) 
 and artificial intelligence (AI) in the field of forensic investigation. Shoe prints collected at crime scenes play a pivotal role 
-in investigations as they have the potential to place suspects at the scene of the crime. Giving crime scene investigators a quick and easy
-way of identify a shoe print with their phone is something that SoleSearch strives to achieve.
+in investigations as they have the potential to place suspects at the scene of the crime. Giving crime scene investigators a quick and easy way to identify a shoe print with their phone is something that SoleSearch strives to achieve.
 
 ## Our Process
 - [Initial Sketches](https://drive.google.com/file/d/1MloXdvhYurrsXEMxdIuRhPk6Bq7qmFPP/view?usp=sharing)
