@@ -10,11 +10,12 @@ in investigations as they have the potential to place suspects at the scene of t
 ## Requirements
 - Android Studio
 - Gradle
+- Android device which supports AR.
 
 ## Compile and Running
 1. Clone the repository
 2. Import the project in Android Studio
-3. Build > Make Project
+3. Let it sync the application.
 4. Run > Run 'app' </br>
 
 *Note: Running the application on an emulator will not allow you to fully utilize the AR capabilities. Please run the apk 
